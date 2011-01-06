@@ -1,0 +1,123 @@
+
+.Application-content-title {
+	background: #E3E8F3 url(../gwt/standard/images/hborder.png) repeat-x
+		scroll 0 -2003px;
+	border-bottom: 2px solid #BBCDF3;
+	padding: 4px 0 3px 6px;
+	text-align: left;
+	color: black;
+	font-weight: bold;
+}
+
+
+.table_data_padding_20 td {
+	padding: 20px;
+}
+
+.table_data_padding_5 td {
+	padding: 5px;
+}
+
+.table_data_padding_2 td {
+	padding: 2px;
+}
+
+.tableHeader {
+	font-weight: bold;
+	background: #C6CCD2;
+}
+
+.tableHeaderFilterActions {
+	font-weight: lighter;
+}
+
+.tableHeaderFilterActions tr td {
+	padding: 0px 5px 0px 5px;
+}
+
+.tableHeaderFilterFilter td {
+	padding: 0px 2px 0px 0px;
+	vertical-align: top;
+}
+
+.tableHeaderFilterFilter td .gwt-TextBox {
+	padding: 0px 0px 0px 0px;
+}
+
+.tableHeaderFilterActions .gwt-Label {
+	font-size: x-small;
+}
+.tableColorRow {
+	background: #EEEEEE;
+}
+
+.tableHighlightedRow {
+	background: #FFFF88;
+}
+
+.tableHighlightedRowRed {
+	background: #FF8888;
+}
+
+.table_with_borders {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.table_with_borders TR TD {
+	border-left: 1px solid black;
+}
+
+.doubleCell{
+	text-align: right;
+}
+
+.actionWrap {
+	cursor: pointer;
+}
+
+.navigationLink{
+	cursor: pointer;
+	color: #0065CC;
+	padding-left: 10px;
+}
+
+.dialogVPanel {
+	margin: 5px;
+}
+
+.dialogImage {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+
+.ImageAndLabelDiv {
+	display: block;
+}
+
+.ImageAndLabelDiv .gwt-Image {
+	float: left;
+	padding-right: 4px;
+}
+.ImageAndLabelDiv .gwt-Label {
+	float: left;
+}
+
+.innerPane {
+	background-color: #FFFFFF;
+	vertical-align: top;
+}
+
+
+.marginAuto{
+	margin:auto;
+}
+
+.GChart {
+	text-align:center;
+	vertical-align: middle;
+	margin: auto;
+}
+

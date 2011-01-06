@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project 
+	xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+
+	<groupId>no.dmma.yt</groupId>
+	<artifactId>YT</artifactId>
+	<packaging>war</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<name>YT</name>
+
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<jdk.source>1.6</jdk.source>
+		<jdk.target>1.6</jdk.target>
+		<spring.version>3.0.3.RELEASE</spring.version>
+		<gdata.youtube.version>2.0</gdata.youtube.version>
+		<gdata.client.version>1.0</gdata.client.version>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>central</id>
+			<name>Maven Repository</name>
+			<url>http://repo1.maven.org/maven2</url>
+		</repository>
+		<repository>
+			<id>constretto.org</id>
+			<name>Constretto public maven repository</name>
+			<url>http://repo.constretto.org/content/repositories/releases</url>
+		</repository>
+		<repository>
+			<id>local</id>
+			<name>Local repository</name>
+			<url>file://C:/Users/Dimas/onecom/em1/portia/maven-repository</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<!-- ************************** GData & YouTube *************************** -->
+		<dependency>
+			<groupId>com.google.gdata</groupId>
+			<artifactId>gdata-youtube</artifactId>
+			<version>${gdata.youtube.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gdata</groupId>
+			<artifactId>gdata-client</artifactId>
+			<version>${gdata.client.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gdata</groupId>
+			<artifactId>gdata-media</artifactId>
+			<version>${gdata.client.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gdata</groupId>
+			<artifactId>gdata-core</artifactId>
+			<version>${gdata.client.version}</version>
+		</dependency>
+		<!-- ************************** Constretto *************************** -->
+		<dependency>
+			<groupId>org.constretto</groupId>
+			<artifactId>constretto-api</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.constretto</groupId>
+			<artifactId>constretto-core</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<!-- ***************************** SPRING ***************************** -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- ***************************** Other ***************************** -->
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.collections</groupId>
+			<artifactId>google-collections</artifactId>
+			<version>1.0</version>
+		</dependency>
+		
+	</dependencies>
+	<build>
+		<finalName>YT</finalName>
+		<plugins>
+			<plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>maven-jetty-plugin</artifactId>
+                <version>6.1.22</version>
+                <configuration>
+                    <contextPath>/</contextPath>
+                    <reload>manual</reload>
+                    <connectors>
+                        <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+                            <port>8086</port>
+                            <maxIdleTime>60000</maxIdleTime>
+                        </connector>
+                    </connectors>
+                </configuration>
+            </plugin>
+			
+            <plugin>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<configuration>
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>true</downloadJavadocs>
+					<wtpversion>1.5</wtpversion>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${jdk.source}</source>
+					<target>${jdk.target}</target>
+					<encoding>UTF-8</encoding>
+					<showDeprecation>true</showDeprecation>
+					<showWarnings>true</showWarnings>
+				</configuration>
+			</plugin>
+			
+			
+
+		</plugins>
+	</build>
+
+
+
+
+
+
+</project>

@@ -1,0 +1,7 @@
+*.log
+.classpath
+.metadata
+.project
+.settings
+target
+workspace
