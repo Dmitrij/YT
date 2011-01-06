@@ -1,2 +1,13 @@
 Youtube API test application
 =====================
+
+Stand along web application that interact with YouTube using Google API.
+
+
+
+Technologies:
+	- Java
+	- Spring (WebMVC)
+	- GData (GoogleAPI)
+	- Constretto
+	- Maven 
